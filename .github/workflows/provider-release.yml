@@ -1,0 +1,11 @@
+name: provider-release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    uses: dangernoodle-io/.github/.github/workflows/terraform-provider-release.yml@main
+    secrets: inherit
