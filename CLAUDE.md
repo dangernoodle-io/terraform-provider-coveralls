@@ -6,7 +6,7 @@ Registry: `registry.terraform.io/dangernoodle-io/coveralls`
 
 ## Stack
 
-- Go 1.24, terraform-plugin-framework v1 (protocol v6), no CGO
+- Go 1.25, terraform-plugin-framework v1 (protocol v6), no CGO
 - HTTP client: `go-resty/resty`
 - Test mocking: `jarcoal/httpmock`
 
