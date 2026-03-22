@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"os"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
@@ -22,4 +23,7 @@ var testAccProtoV6ProviderFactories = map[string]func() (tfprotov6.ProviderServe
 }
 
 func testAccPreCheck(t *testing.T) {
+	if os.Getenv("COVERALLS_API_TOKEN") == "" {
+		t.Fatal("COVERALLS_API_TOKEN must be set for acceptance tests")
+	}
 }
